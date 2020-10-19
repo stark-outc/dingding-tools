@@ -17,7 +17,7 @@ class GetScoreData():
         self.user = user
         self.passward = passward
         if db_host is None:
-            self.db_host = "rr-uf6i4aq7jg3z292vv.mysql.rds.aliyuncs.com"
+            self.db_host = ""
         else:
             self.db_host = db_host
         self.mysql_server = bs_meathod_n.MysqlService(self.db_host,
@@ -57,7 +57,7 @@ def main(path, mysql_server, n=0):
 
 
 if __name__ == '__main__':
-    mysql_server = GetScoreData('prod_readonly', 'On1moBvlecAJspzp')
+    mysql_server = GetScoreData('user', 'password')
     save_path = r'C:\Users\徐钦华\Desktop\数据分析项目\模型分数监控\模型分数监控\分数调用记录'
     main(save_path, mysql_server, n=0)
 
