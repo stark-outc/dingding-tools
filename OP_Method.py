@@ -94,11 +94,11 @@ class FileUrl:
 
     @property
     def file_url(self):
-        auth = oss2.Auth('LTAI4GDFwqSYSYRaDZj4bM1D', 'OdrgX8OvSmiY8J1s8vWGKcMFUxKTM4')
+        auth = oss2.Auth('', '')
         bucket = oss2.Bucket(
             auth,
-            'oss-cn-shanghai.aliyuncs.com',
-            'yunying-file-storage')
+            '',
+            '')
         # bucket.create_bucket(oss2.BUCKET_ACL_PRIVATE)
         bucket.put_object_from_file(
             self.file_name, os.path.join(
@@ -107,7 +107,7 @@ class FileUrl:
         return url
 
     # def file_url(self):
-    #     q = Auth('GXYrBTUXPCLD2IXiBwN_0xPhQDCpXyYvT_4M_V6h', '0XAiq0D-mbtasgVX2s0JW5GNY-w-QrNWQoFVatKs')
+    #     q = Auth('', '')
     #     bucket_name = 'neal2020'
     #     key = uuid.uuid4().hex
     #     token = q.upload_token(bucket_name, key, 864000)
@@ -244,7 +244,7 @@ if __name__=='__main__':
     
     ftp.downloan_file('/data/901.creditcard/Report/click_report_pic','2020-10-19_16.png','D:\97.Dong','click_report.png')
     ftp.ftp_close()
-    url = 'https://oapi.dingtalk.com/robot/send?access_token=08b989ee807760d0ffb30675786bac42cdb24acc0194f558bcb8ace1866d1c17'
+    url = ''
     title = 'click_report'
     dd_server = DingDingRobotService(url,4)
     file_server = FileUrl('D:\97.Dong','click_report.png')
