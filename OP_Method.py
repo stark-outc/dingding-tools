@@ -64,9 +64,9 @@ class OpFtp:
     def __init__(self):
         self.ftp = FTP()
         self.ftp.set_debuglevel(3)
-        self.host = '10.1.120.101'
-        self.username = 'hzph-02'
-        self.password = 'xyG50tPtN'
+        self.host = ''
+        self.username = ''
+        self.password = ''
         self.ftp.connect(self.host, 21)      
         self.ftp.login(self.username, self.password)
 #        self.ftp.encoding = "GB18030"
